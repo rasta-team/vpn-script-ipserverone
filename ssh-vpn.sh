@@ -18,7 +18,7 @@ commonname=akiraa
 email=admin@akiraavpn.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -87,12 +87,12 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -122,7 +122,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -201,7 +201,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/bannerssh"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/bannerssh"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -224,37 +224,37 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/about.sh"
-wget -O menu "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/member.sh"
-wget -O delete "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/info.sh"
-wget -O ram "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/zahwanugrah/auto/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/zahwanugrah/auto/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/xp.sh"
-wget -O bannermenu "https://raw.githubusercontent.com/zahwanugrah/auto/main/bannermenu"
-wget -O update "https://raw.githubusercontent.com/zahwanugrah/auto/main/update.sh"
+wget -O add-host "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com//akiraafudo/vpn-script-ipserverone/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/xp.sh"
+wget -O bannermenu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/bannermenu"
+wget -O update "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/update.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
