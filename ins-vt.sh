@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com//akiraafudo/vpn-script/master/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com//akiraafudo/vpn-script-ipserverone/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
