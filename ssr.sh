@@ -122,7 +122,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/akiraafudo/vpn-script/master/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
