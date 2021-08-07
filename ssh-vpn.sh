@@ -152,8 +152,12 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 445
+accept = 442
 connect = 127.0.0.1:77
+
+[openvpn]
+accept = 992
+connect = 127.0.0.1:1194
 
 END
 
@@ -226,7 +230,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/menu2.sh"
 wget -O usernew "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/hapus.sh"
@@ -247,16 +251,15 @@ wget -O port-ovpn "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipser
 wget -O port-ssl "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-ssl.sh"
 wget -O port-wg "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-wg.sh"
 wget -O port-tr "https://raw.githubusercontent.com//akiraafudo/vpn-script-ipserverone/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-sstp.sh"
+#wget -O port-sstp "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-sstp.sh"
 wget -O port-squid "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-squid.sh"
 wget -O port-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-ws.sh"
 wget -O port-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-vless.sh"
 wget -O wbmn "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/xp.sh"
-wget -O bannermenu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/bannermenu"
-wget -O update "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/update.sh"
+wget -O "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/kernal-update.sh"
 chmod +x add-host
-chmod +x menu
+chmod +x menu2
 chmod +x usernew
 chmod +x trial
 chmod +x hapus
@@ -277,15 +280,15 @@ chmod +x change-port
 chmod +x port-ovpn
 chmod +x port-ssl
 chmod +x port-wg
-chmod +x port-sstp
+#chmod +x port-sstp
 chmod +x port-tr
 chmod +x port-squid
 chmod +x port-ws
 chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
-chmod +x bannermenu
-chmod +x update
+#chmod +x bannermenu
+chmod +x kernal-update
 echo "0 0 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
