@@ -5,9 +5,9 @@ NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
 echo "Checking VPS"
 apt install jq curl -y
-DOMAIN=akiraavpn.xyz
+DOMAIN=akiraamy-vpn.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.akiraavpn.xyz
+SUB_DOMAIN=${sub}.akiraamy-vpn.xyz
 CF_ID=ammarzikri50@gmail.com
 CF_KEY=8cb55c4abe56320b2f0840c5864466e0e8f4f
 set -euo pipefail
