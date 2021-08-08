@@ -234,7 +234,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/menu2.sh"
+wget -O menu "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/hapus.sh"
@@ -261,7 +261,7 @@ wget -O port-ws "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserve
 wget -O port-vless "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/port-vless.sh"
 wget -O wbmn "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/xp.sh"
-wget -O "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/kernal-update.sh"
+wget -O "https://raw.githubusercontent.com/akiraafudo/vpn-script-ipserverone/main/update-1.2.sh"
 chmod +x add-host
 chmod +x menu2
 chmod +x usernew
@@ -292,7 +292,7 @@ chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
 #chmod +x bannermenu
-chmod +x kernal-update
+chmod +x update-1.2
 echo "0 0 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
